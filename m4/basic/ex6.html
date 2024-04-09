@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<select name="plato" id="plato">
+    <option value="0">Elija</option>
+    <option value="1">carn</option>
+    <option value="2">pasta</option>
+    <option value="3">risotto</option>
+</select>
+<select name="into" id="into">
+    <option value="0">Elija</option>
+    <option value="1">vega</option>
+    <option value="2">gluten</option>
+    <option value="3">lactosa</option>
+</select>
+
+<input type="button" value="click" onclick="check()">
+
+    <script>
+
+function check (){
+
+    let plato = document.getElementById('plato').value
+    let intolerancia = document.getElementById('into').value
+    
+    console.log(typeof plato, intolerancia)
+    message = ''
+    switch (plato + "-" + intolerancia) {
+    case "1-1":
+    case "2-2":
+    case "3-3":
+        message = "vostè no pot menjar aquest plat"
+        break;
+    default:
+        message = "perfecte, comanda correcta"
+        break;
+    }
+
+    console.log(message)
+}
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        let hour = 19
+        let greeting = ''
+
+
+        if (hour <= 13) {
+            greeting = "Bon dia"
+        } else if (hour <= 18) {
+            greeting = 'Buenas tardes'
+        } else {
+            greeting = 'Buenas noches'
+        }
+
+        // console.log(greeting)
+
+        /** And */
+        // tortilla de patatas
+
+        let huevos = true
+        let aceite = true
+        let patatas  = false
+        let cebolla = false
+        let sal = true
+
+        let message = ''
+
+        if (huevos == true && aceite == true && sal == true) {
+
+            if (patatas == true && cebolla == true) {
+                message = 'Tortilla patatas con cebolla con sal'
+            } else if (patatas == true && cebolla == false){
+                message = 'Tortilla patatas sin cebolla con sal '
+            } else {
+                message = 'Tortilla Francesa con sal'
+            }
+
+        } else if (huevos == true && aceite == true && sal == false) {
+
+            if (patatas == true && cebolla == true) {
+                message = 'Tortilla patatas con cebolla sin sal'
+            } else if (patatas == true && cebolla == false){
+                message = 'Tortilla patatas sin cebolla sin sal'
+            } else {
+                message = 'Tortilla Francesa sin sal'
+            }
+
+        } else if (huevos == true){
+            message = 'Boil eggs'
+        } else {
+            message = 'el menú de la esquina'
+        }
+
+        // console.log(message)
+
+    /** Or */
+        let message2
+
+        let moto = true
+        let bus = true 
+        let coche = true
+        let pie = false
+        let bici = false
+        let metro = true
+
+        if (!bici) {
+            console.log('y además haces deporte')
+        } else {
+            console.log('y si lo planteas...')
+        }
+
+
+        //            (true)              &&           (true)
+        if ((bici != true || pie == true) && (bus == true || metro == true)) {
+            message2 = 'Eco movilitat'
+        } else {
+            message2 = 'emisión CO2'
+        }
+        console.log(message2)
+
+    /** Not */
+    let eresNumero = 57
+
+    console.log(eresNumero)
+    console.log( typeof eresNumero )
+    // console.log( isNaN(eresNumero) ) // true - string // false Number
+    // console.log( !isNaN(eresNumero) ) // false - string // true Number
+
+
+    if (eresNumero != 57 ){
+        console.log('great')
+    }
+
+
+    // Error 
+    // condición 
+
+    let anyosExpe = -1
+
+    if (anyosExpe < 0) {
+        console.error('No se puede  ... ')
+        return 
+        // break;
+    }
+
+    if (anyosExpe < 2){  }
+    else if (anyosExpe < 4) {
+    }
+
+
+
+
+    </script>
+</body>
+</html>

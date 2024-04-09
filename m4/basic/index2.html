@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pregunta">
+        <input type="text" placeholder="name">
+        <button type="button" onclick="comprobacio()">click me</button>
+    </div>
+
+    <div id="salida">
+        <p id="demo"></p>
+    </div>
+
+    <div id="Final">
+        <footer>Soy un footer</footer>
+    </div>
+
+
+    <div id="result"></div>
+
+    <script>
+
+        function comprobacio() {
+
+            let parraf = document.getElementById('demo')
+
+            // let edat = 28
+
+            // Error
+            // if (edat > 120) {
+            //     console.error('...')
+            //     return
+            // }
+
+            // // casos de uso
+            // if (edat >=  18 ){
+            //     console.log('mayor de edad')
+
+            //     // if (edat <= 28 ) {
+            //     //     console.log('Contemporáneo')
+            //     // } else {
+            //     //     console.log('senyior')
+            //     // }
+
+            //     (edat <= 28) ? console.log('Contemporáneo') :  console.log('senyior')
+
+            // } else {
+            //     console.log('No eres mayor de edad')
+            // }
+
+            // Operador ternario
+            let color = 'Javascript' // String
+
+            // (color === 'azul') 
+            //     ? console.log('yes') 
+            //     : (color == 'rojo')
+            //         ? console.log('yes') 
+            //         : (color == 'Cian')
+            //             ? console.log('yes') 
+            //             : console.log('No')
+
+
+            console.log(color.length)    // propiedades
+            console.log(color.charAt(6)) // métodos
+
+            parraf.innerHTML = color + '<br>' + color.length + '<br>' + color.charAt(6)
+            // parraf.innerHTML += 
+            // parraf.innerHTML += 
+
+            // parraf.innerHTML = '<p></p>'
+            
+        }
+
+
+
+
+    </script>
+</body>
+</html>

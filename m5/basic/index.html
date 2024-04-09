@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    
+
+
+    <script>
+        let saludo = 'Hola'
+        const persona = 'soy una persona' // objeto
+        // const arr = [] // referencia en memoria
+        const arr2 = [1, 2, 3, 'a', 'b', 'c', saludo, [9, 8, 7], persona, 'Hola']
+
+        // console.log(arr)
+        // console.log(arr2)
+        // console.log( arr2[0] )
+        // console.log( arr2[7] )
+        // console.log( arr2[7][0] )
+        // console.log( arr2[7][1] )
+        // console.log( arr2[7][2] )
+        
+        // console.log( arr2[8]) // persona
+        
+        
+        
+        // console.log( 'longitud', arr2.length ) // number
+        // console.log( arr2[arr2.length] ) //undefined
+        // console.log( arr2[ arr2.length - 1 ] ) 
+
+        // //push & pop & shift & unshift
+        // arr2.push('soy el último') // param
+        // console.log(arr2)
+        // // console.log(arr2.pop()) lo que devuelve
+        // // arr2.pop() // sin param
+        // // console.log(arr2)
+        // arr2.unshift('soy el primero')
+        // console.log(arr2)
+
+        // const result = document.getElementById('result')
+        
+        // // Bucle Loop
+        //     // inicio ; condición ; cambio
+        // for (let i = 0; i <= arr2.length - 1; i++) {
+        //     result.innerHTML += `${ arr2[i]} <br>`
+        // }
+
+        // // while & do - while
+        let j = 0
+        let encontrado = false 
+        let objetoEncontrado = null
+
+
+
+
+        while (j < infantes && encontrado == false ) {
+
+            if (arr2[j] == 'Hola') {
+                encontrado = true
+                console.log(encontrado)
+
+                objetoEncontrado = arr2[j]
+            }
+
+            console.log(j)
+            j++
+        }
+
+        console.log(objetoEncontrado)
+
+        let numero = 0
+
+        do {
+
+            numero++ // 1, 2, 3, 4
+            console.log(numero)
+
+        } while (numero <= 3)
+
+        // .. code
+
+
+
+        console.log( Math.round(3.14) ) // 3
+        console.log( Math.round(3.654) ) // 4
+        
+        console.log( Math.floor(3.14) ) // 3
+        console.log( Math.floor(3.654) ) // 3
+
+        console.log( Math.ceil(3.14) ) // 4
+        console.log( Math.ceil(3.654) ) // 4
+        
+        console.log( Math.ceil(Math.random() * 10 )) // 0 - 1
+
+
+    </script>
+</body>
+</html>

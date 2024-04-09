@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" placeholder="cantidad" id="cantidad">
+    <input type="button" value="click" onclick="pedir()">
+    <div id="ingresar"></div>
+    <div id="result"></div>
+    <script>
+
+        let result = document.getElementById('result')
+        let ingresar = document.getElementById('ingresar')
+
+        let nombreArray = []
+
+        function pedir(){
+            let cantidad = parseInt(document.getElementById('cantidad').value)
+
+            for (let index = 0; index < cantidad; index++) {
+                const br = document.createElement('br');
+                const input = document.createElement('input');
+                input.type = 'text'
+                input.className = 'nombres'
+                input.placeholder = 'Escriba un nombre'
+                ingresar.appendChild(input)
+                ingresar.appendChild(br)
+            }
+
+            const boto = document.createElement('button')
+            boto.textContent = 'click'
+            boto.onclick = recoger
+            ingresar.appendChild(boto)
+            console.log(nombreArray)
+            
+        }
+
+        function recoger(){
+            const inputArray = document.querySelectorAll('input.nombres')
+
+            for (let index = 0; index < inputArray.length; index++) {
+                const palabra = inputArray[index].value
+                const primera = palabra.charAt(0).toUpperCase()
+
+                if (primera == 'A') {
+                    nombreArray.push(palabra)
+                }
+                
+            }
+
+
+            inputArray.forEach(input => {
+                console.log(input.value);
+            });       
+
+            result.innerHTML = `los nombres más bonitos son: <br>`
+            for (let index = 0; index < nombreArray.length; index++) {
+                result.innerHTML += nombreArray[index] + '<br>'
+                
+            }
+            console.log(nombreArray)
+
+        }
+    </script>
+</body>
+</html>

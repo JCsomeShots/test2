@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // const myArr = [1, 2,  3, 'hola', [5, 66, 7]]
+        // console.log(myArr[3]) // hola
+        // console.log(myArr[4][1]) // 66
+        // console.log(myArr[4]) 
+
+        // console.log(myArr [myArr.length - 1] )
+
+        // // Object 
+        // // clave - valor
+        // // objeto literal 
+
+        // const person = {
+        //     nombre : 'juanca',
+        //     apellido : 'castillo',
+        //     edad : 45, 
+        //     civil : true,
+        //     hobbies : ['leer', 'nadar', 'fotografía', [true, false]],
+        //     direccion : {
+        //         calle : 'Gran via',
+        //         numero : 31,
+        //         puerta : 4,
+        //         code: '08001',
+        //         esc: 'B'
+        //     }
+        // }
+
+        // console.log(person)
+
+        // console.log(person['nombre'])
+        // console.log(person.nombre)
+
+        // console.log(person['civil'])
+        // console.log(person.civil)
+
+        // console.log(person.hobbies)
+        // console.log(person['hobbies'])
+        // console.log(person['hobbies'][2])
+        // console.log(person['hobbies'][3][1])
+        // console.log(person.hobbies[1])
+
+        // console.log(person.direccion['calle'])
+        // console.log(person.direccion.calle)
+
+        // let keys = Object.keys(person)
+        // console.log(keys)
+
+        // let valor = Object.values(person)
+        // console.log(valor)
+
+        // let contiene = person.hasOwnProperty('edad')
+        // console.log(contiene)
+
+
+                        // let num1 = 6
+                        // let num2 = 6
+                        // let num3 = 6
+                        // let message = ''
+                        // let triangulo = ''
+
+                        // let mayor = num1
+                        // let menor = num1
+
+                        // if (num1 == num2 && num2 == num3 && num1 == num3) {
+                        //     message = 'hay 2 números iguales'
+                        //     triangulo = 'equilatero'
+                        // } else if (num1 != num2 && num2 != num3 && num1 != num3) {
+                        //     triangulo = 'escalè'
+                        // } else {
+                        //     triangulo = 'isòsceles'
+                        // }
+
+                        // if (mayor < num2) {
+                        //     mayor = num2
+                        // }
+
+                        // if (mayor < num3) {
+                        //     mayor = num3
+                        // }
+
+                        // console.log(triangulo)
+
+
+                        nombre()
+
+// Function Declarada
+function nombre(){
+    console.log('Hola clase, buen lunes')
+    console.log(this)
+}
+
+nombre()
+
+// console.log(miVariable)
+// let miVariable
+
+// myfunc()
+
+// funciones expresadas
+const myfunc = function () {
+    console.log('Soy una function expresada')
+    console.log(this)
+
+}
+myfunc()
+
+
+const saludar = () => {
+    console.log('Soy una arrow function ')
+    console.log(this)
+
+}
+saludar()
+
+
+const saludar2 = (nombre) => {
+    console.log(`Me llamo  ${nombre}`)
+    console.log(this)
+
+}
+saludar2('JuanCa')
+
+
+
+
+const sumar = (x, y) => x + y 
+console.log(sumar(4, 5))
+
+
+// function validation(a, b, c){
+//     return !isNaN(a) && !isNaN(b) && !isNaN(c)
+// }
+
+// let variableValidar = validation(a,b,c)
+
+const validar = (i, j) => !isNaN(i) && !isNaN(j)
+console.log(validar('juanca', 189))
+
+// const result = document.getElementById('result')
+// const inputNumber = parseInt(document.getElementById('inputNumber').value)
+
+
+
+function saludar4 () {
+    const saludar3 = (nombre, apellido) => {
+        console.log(this)
+        console.log(`Somos la ${nombre} ${apellido}`)
+    }
+    saludar3('Clase marzo', 'abril')
+}
+
+saludar4()
+
+
+
+class Contador {
+  #count = 0; // Propiedad privada usando la sintaxis de campo privado
+
+  #incrementar() {
+    this.#count++;
+  }
+
+  #resetear() {
+    this.#count = 0;
+  }
+
+  obtenerConteo() {
+    return this.#count;
+  }
+
+  aumentarConteo() {
+    this.#incrementar();
+  }
+
+  reiniciarConteo() {
+    this.#resetear();
+  }
+}
+
+const contador = new Contador();
+console.log(contador.obtenerConteo()); // 0
+contador.aumentarConteo();
+console.log(contador.obtenerConteo()); // 1
+contador.reiniciarConteo();
+console.log(contador.obtenerConteo()); // 0
+
+
+class Calculadora {
+  // Método estático para sumar dos números
+  static sumar(num1, num2) {
+    return num1 + num2;
+  }
+
+  // Método estático para restar dos números
+  static restar(num1, num2) {
+    return num1 - num2;
+  }
+}
+
+// Uso del método estático sumar
+const resultadoSuma = Calculadora.sumar(5, 3);
+console.log("Resultado de la suma:", resultadoSuma); // Resultado de la suma: 8
+
+// Uso del método estático restar
+const resultadoResta = Calculadora.restar(10, 4);
+console.log("Resultado de la resta:", resultadoResta); // Resultado de la resta: 6
+
+
+
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  // Método estático para generar una persona aleatoria
+  static generarPersonaAleatoria() {
+    const nombres = ["Ana", "Carlos", "Elena", "Pedro", "María"];
+    const edades = [20, 25, 30, 35, 40];
+    const nombreAleatorio = nombres[Math.floor(Math.random() * nombres.length)];
+    const edadAleatoria = edades[Math.floor(Math.random() * edades.length)];
+    return new Persona(nombreAleatorio, edadAleatoria);
+  }
+
+  // Método para obtener información de la persona
+  obtenerInformacion() {
+    return `${this.nombre} tiene ${this.edad} años.`;
+  }
+}
+
+// Crear una persona usando el método estático
+const personaAleatoria = Persona.generarPersonaAleatoria();
+console.log(personaAleatoria.obtenerInformacion()); // Por ejemplo: Ana tiene 25 años.
+
+
+
+    </script>
+    
+</body>
+</html>

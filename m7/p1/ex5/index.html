@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla multiplicar</title>
+</head>
+<body>
+
+    <div id="result"></div>
+
+    <script>
+        let num = 0
+        let divResult = document.getElementById('result')
+        let i = 1
+
+        divResult.innerHTML = ''
+
+        // validate
+        do {
+            num = parseInt( prompt('Introducir número del 1 al 10') )
+        } while (num < 1 || num > 10)
+
+        for ( ; i <= 10; i++) {
+            divResult.innerHTML += `  ${num} * ${i} = ${num * i} <br>`
+        }
+
+    </script>
+</body>
+</html>

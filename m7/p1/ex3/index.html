@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" placeholder="num" id="num1">
+    <input type="button" value="click" onclick="numPar()">
+    <div id="result"></div>
+    <script>
+
+        // ejercicio 3
+        function numPar(){
+            let result = document.getElementById('result')
+            let num1 = parseInt( document.getElementById('num1').value )
+
+            if(num1 % 2 === 0) {
+                result.innerHTML = `Es par`
+            } else {
+                result.innerHTML = `Es impar`
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="diga" id="word">
+    <input type="button" value="click" onclick="reconocer()">
+    <script>
+
+        function reconocer(){
+            let word = document.getElementById('word').value 
+            console.log(word)
+            console.log(word.length)
+            console.log(word.charAt(8).toUpperCase())
+
+            // const personas = [
+            // { nombre: 'Alice', edad: 30 },
+            // { nombre: 'Bob', edad: 25 },
+            // { nombre: 'Carol', edad: 27 }
+            // ];
+            // console.table(personas);
+
+        }
+
+    </script>
+</body>
+</html>

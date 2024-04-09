@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" placeholder="num" id="num">
+    <input type="text" placeholder="char" id="char">
+    <input type="button" value="click" onclick="dibujar()">
+    <div id="result"></div>
+
+    <script>
+
+        function dibujar(){
+
+            let num = parseInt( document.getElementById('num').value )
+            let char = document.getElementById('char').value
+            let result = document.getElementById('result')
+
+            result.innerHTML = ''
+
+            // vertical
+            for (let i = 1; i <= num; i++) {
+
+                // horizontal
+                for (let j = 1; j < num; j++) {
+                    result.innerHTML += char
+                }
+
+                result.innerHTML += char +  '<br>'
+            }
+
+        }
+    </script>
+</body>
+</html>
