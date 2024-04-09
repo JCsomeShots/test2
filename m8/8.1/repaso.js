@@ -6,6 +6,10 @@
 // Delete + array.splice (index , howmany )
 
 
+
+
+
+// nueva info 
 // revisión métodos del array 
 
 // Modelaje de clase 

@@ -21,6 +21,11 @@ class Persona {
         this.#nombre = param 
     }
 
+
+
+// más info
+
+
     get hobbies () {
         return this._hobbies
     }
