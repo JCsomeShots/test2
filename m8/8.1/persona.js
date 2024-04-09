@@ -23,7 +23,8 @@ class Persona {
 
 
 
-// más info
+// más info y más y más
+
 
 
     get hobbies () {
